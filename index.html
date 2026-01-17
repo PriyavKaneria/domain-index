@@ -1,61 +1,966 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-  <title>Index of /</title>
-  <style>
-    body {
-      font-family: Georgia, serif;
-      margin: 20px;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index of Priyav K Kaneria</title>
+    <meta name="title" content="Index of Priyav K Kaneria" />
+    <meta name="description" content="A curated directory of all my digital experiments" />
 
-    h1 {
-      text-align: left;
-    }
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://index.priyavkaneria.com/" />
+    <meta property="og:title" content="Index of Priyav K Kaneria" />
+    <meta property="og:description" content="A curated directory of all my digital experiments" />
+    <meta property="og:image" content="https://index.priyavkaneria.com/images/meta.png" />
 
-    ul {
-      list-style-type: none;
-      padding: 0;
-    }
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://index.priyavkaneria.com/" />
+    <meta property="twitter:title" content="Index of Priyav K Kaneria" />
+    <meta property="twitter:description" content="A curated directory of all my digital experiments" />
+    <meta property="twitter:image" content="https://index.priyavkaneria.com/images/meta.png" />
 
-    body a {
-        color: black;
-        text-decoration: none;
-    }
+    <script defer src="https://umami.priyavkaneria.com/script.js"
+        data-website-id="b30b4ccf-b6e4-4f99-b238-fe03d18fdeb0"></script>
 
-    li a {
-      display: block;
-      padding: 5px 0;
-      text-decoration: none;
-      color: blue;
-    }
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&family=UnifrakturMaguntia&display=swap"
+        rel="stylesheet">
 
-    li a:hover {
-      text-decoration: underline;
-      cursor: pointer;
-    }
-  </style>
+    <style>
+        @font-face {
+            font-family: 'Chomsky';
+            src: url('Chomsky.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
 
-  <script defer src="https://umami-sable-xi.vercel.app/script.js" data-website-id="b30b4ccf-b6e4-4f99-b238-fe03d18fdeb0"></script>
+        :root {
+            --paper-bg: #f8f5e6;
+            --paper-bg-darker: #f0edd8;
+            --ink-color: #1a1a1a;
+            --ink-lighter: #444;
+            --subtext-color: #888;
+            --headline-font: 'Chomsky', 'UnifrakturMaguntia', cursive;
+            --body-font: 'Merriweather', Georgia, serif;
+            --separator-color: #b8b09b;
+            --accent-color: #8b4513;
+
+            --transition-smooth: cubic-bezier(0.25, 0.8, 0.25, 1);
+            --transition-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--paper-bg);
+            color: var(--ink-color);
+            font-family: var(--body-font);
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            /* Subtle paper texture */
+            background-image:
+                radial-gradient(ellipse at 20% 30%, rgba(139, 69, 19, 0.03) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 70%, rgba(139, 69, 19, 0.02) 0%, transparent 50%);
+        }
+
+        /* --- Header / Masthead --- */
+        header {
+            text-align: center;
+            padding: 40px 20px 30px;
+            border-bottom: 3px double var(--ink-color);
+            margin-bottom: 0;
+            background: linear-gradient(to bottom, var(--paper-bg) 0%, var(--paper-bg-darker) 100%);
+        }
+
+        .masthead {
+            font-family: var(--headline-font);
+            font-size: clamp(2.5rem, 6vw, 5rem);
+            margin: 0;
+            letter-spacing: 3px;
+            color: var(--ink-color);
+            text-decoration: none;
+            display: inline-block;
+            transition: transform 0.3s var(--transition-smooth);
+        }
+
+        .masthead:hover {
+            transform: scale(1.02);
+            color: var(--ink-color);
+            text-decoration: none;
+        }
+
+        .dateline {
+            font-size: 0.85rem;
+            color: var(--ink-lighter);
+            margin-top: 10px;
+            font-style: italic;
+            letter-spacing: 1px;
+        }
+
+        /* --- Date Bar --- */
+        .date-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 40px;
+            border-bottom: 1px solid var(--separator-color);
+            font-size: 0.75rem;
+            color: var(--ink-lighter);
+            background: var(--paper-bg-darker);
+            letter-spacing: 0.5px;
+        }
+
+        .date-bar .english-date {
+            text-transform: uppercase;
+        }
+
+        .date-bar .hindi-date {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+        }
+
+        /* --- Main Grid Layout --- */
+        main {
+            display: grid;
+            grid-template-columns: 1.3fr 1px 1.1fr 1px 1fr;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 30px 40px 60px;
+            gap: 0;
+        }
+
+        .column {
+            padding: 0 30px;
+        }
+
+        .column:first-child {
+            padding-left: 0;
+        }
+
+        .column:last-child {
+            padding-right: 0;
+        }
+
+        .vertical-separator {
+            background: linear-gradient(to bottom,
+                    transparent 0%,
+                    var(--separator-color) 10%,
+                    var(--separator-color) 90%,
+                    transparent 100%);
+            width: 1px;
+        }
+
+        /* --- Category Sections --- */
+        .category {
+            margin-bottom: 40px;
+        }
+
+        .category:last-child {
+            margin-bottom: 0;
+        }
+
+        .category-title {
+            font-family: var(--headline-font);
+            font-size: clamp(1.5rem, 3vw, 2.2rem);
+            margin: 0 0 20px 0;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--ink-color);
+            position: relative;
+        }
+
+        .category-title::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: var(--separator-color);
+        }
+
+        /* --- Link Cards --- */
+        .links-container {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .link-card {
+            position: relative;
+            padding: 12px 0 12px 20px;
+            transition: all 0.4s var(--transition-smooth);
+        }
+
+        .link-card::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            top: 12px;
+            font-size: 1.2rem;
+            color: var(--ink-color);
+            transition: transform 0.3s var(--transition-spring);
+        }
+
+        .link-card:hover::before {
+            transform: scale(1.3);
+        }
+
+        .link-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 10px;
+        }
+
+        .link-title {
+            font-weight: 700;
+            font-size: 1rem;
+            color: var(--ink-color);
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+            transition: color 0.2s ease;
+        }
+
+        .link-title::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--ink-color);
+            transition: width 0.3s var(--transition-smooth);
+        }
+
+        .link-title:hover {
+            color: var(--accent-color);
+        }
+
+        .link-title:hover::after {
+            width: 100%;
+        }
+
+        .link-date {
+            font-size: 0.75rem;
+            color: var(--subtext-color);
+            font-style: italic;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+
+        /* --- Image Preview System --- */
+        .image-preview {
+            position: relative;
+            margin-top: 8px;
+            margin-left: 5px;
+            border-left: 2px solid var(--separator-color);
+            padding-left: 15px;
+            overflow: hidden;
+            max-height: 100px;
+            /* Partial view by default */
+            transition: max-height 0.5s var(--transition-smooth);
+            cursor: none;
+        }
+
+        .image-wrapper {
+            position: relative;
+            width: 100%;
+            height: 180px;
+            background: var(--paper-bg-darker);
+            border: 1px solid var(--separator-color);
+            overflow: hidden;
+        }
+
+        .image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top center;
+            transition: transform 0.5s var(--transition-smooth);
+        }
+
+        /* Fade overlay - bottom portion fades to paper background */
+        .fade-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            background: linear-gradient(to bottom,
+                    transparent 0%,
+                    transparent 90%,
+                    rgba(248, 245, 230, 0.7) 95%,
+                    rgba(248, 245, 230, 1) 100%);
+            pointer-events: none;
+            transition: opacity 0.4s var(--transition-smooth);
+        }
+
+        /* Placeholder for images not yet added */
+        .placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--ink-lighter);
+            font-style: italic;
+            font-size: 0.85rem;
+            background: repeating-linear-gradient(45deg,
+                    var(--paper-bg-darker),
+                    var(--paper-bg-darker) 10px,
+                    var(--paper-bg) 10px,
+                    var(--paper-bg) 20px);
+        }
+
+        /* --- Hover States - Expand Image --- */
+        .link-card:hover .image-preview {
+            max-height: 220px;
+            /* Full image reveal */
+        }
+
+        .link-card:hover .fade-overlay {
+            opacity: 0;
+        }
+
+        .link-card:hover .image-wrapper img {
+            transform: scale(1.02);
+        }
+
+        /* Shift neighbors when one is hovered */
+        .link-card:hover~.link-card {
+            transform: translateY(20px);
+        }
+
+        /* --- Tooltip --- */
+        #mouse-tooltip {
+            position: fixed;
+            background: var(--paper-bg);
+            border: 1px solid var(--ink-color);
+            padding: 10px 15px;
+            font-size: 0.85rem;
+            max-width: 280px;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.15);
+            pointer-events: none;
+            opacity: 0;
+            transform: translateY(5px);
+            transition: opacity 0.25s ease, transform 0.25s ease;
+            z-index: 1000;
+            font-family: var(--body-font);
+            line-height: 1.5;
+        }
+
+        #mouse-tooltip.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Tooltip arrow - dynamically positioned */
+        #mouse-tooltip::before {
+            content: '';
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: var(--paper-bg);
+            transform: rotate(45deg);
+        }
+
+        /* Arrow top-left (default: tooltip below and to the right of cursor) */
+        #mouse-tooltip.arrow-top-left::before {
+            top: -5px;
+            left: 20px;
+            border-left: 1px solid var(--ink-color);
+            border-top: 1px solid var(--ink-color);
+        }
+
+        /* Arrow top-right (tooltip below and to the left of cursor) */
+        #mouse-tooltip.arrow-top-right::before {
+            top: -5px;
+            right: 20px;
+            left: auto;
+            border-left: 1px solid var(--ink-color);
+            border-top: 1px solid var(--ink-color);
+        }
+
+        /* Arrow bottom-left (tooltip above and to the right of cursor) */
+        #mouse-tooltip.arrow-bottom-left::before {
+            bottom: -5px;
+            top: auto;
+            left: 20px;
+            border-right: 1px solid var(--ink-color);
+            border-bottom: 1px solid var(--ink-color);
+        }
+
+        /* Arrow bottom-right (tooltip above and to the left of cursor) */
+        #mouse-tooltip.arrow-bottom-right::before {
+            bottom: -5px;
+            top: auto;
+            right: 20px;
+            left: auto;
+            border-right: 1px solid var(--ink-color);
+            border-bottom: 1px solid var(--ink-color);
+        }
+
+        /* --- Simple list for smaller categories --- */
+        .simple-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .simple-list li {
+            padding: 8px 0 8px 20px;
+            position: relative;
+            transition: transform 0.3s var(--transition-smooth);
+        }
+
+        .simple-list li::before {
+            content: '—';
+            position: absolute;
+            left: 0;
+            color: var(--separator-color);
+            transition: color 0.2s ease;
+        }
+
+        .simple-list li:hover {
+            transform: translateX(5px);
+        }
+
+        .simple-list li:hover::before {
+            color: var(--ink-color);
+        }
+
+        .simple-list a {
+            color: var(--ink-color);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .simple-list a:hover {
+            color: var(--accent-color);
+        }
+
+        /* --- Footer --- */
+        footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            border-top: 1px solid var(--separator-color);
+            margin-top: 40px;
+            font-size: 0.8rem;
+            color: var(--ink-lighter);
+            font-style: italic;
+        }
+
+        footer .copyright {
+            font-style: normal;
+        }
+
+        /* --- Responsive Design --- */
+        @media (max-width: 1100px) {
+            main {
+                grid-template-columns: 1fr 1px 1fr;
+                padding: 20px 30px;
+            }
+
+            .column:nth-child(5) {
+                grid-column: 1;
+                padding-left: 0;
+                margin-top: 30px;
+            }
+
+            .vertical-separator:nth-child(4) {
+                display: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            main {
+                grid-template-columns: 1fr;
+                padding: 20px;
+            }
+
+            .vertical-separator {
+                display: none;
+            }
+
+            .column {
+                padding: 0;
+                border-bottom: 1px dashed var(--separator-color);
+                padding-bottom: 30px;
+                margin-bottom: 20px;
+            }
+
+            .column:last-child {
+                border-bottom: none;
+            }
+
+            header {
+                padding: 25px 15px;
+            }
+
+            .image-preview {
+                max-height: 80px;
+            }
+
+            .link-card:hover .image-preview {
+                max-height: 180px;
+            }
+        }
+
+        /* --- Print Styles --- */
+        @media print {
+            .image-preview {
+                display: none;
+            }
+
+            .vertical-separator {
+                background: #000;
+            }
+        }
+
+        /* --- Animations --- */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .category {
+            animation: fadeIn 0.6s var(--transition-smooth) backwards;
+        }
+
+        .column:nth-child(1) .category:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .column:nth-child(1) .category:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .column:nth-child(3) .category:nth-child(1) {
+            animation-delay: 0.15s;
+        }
+
+        .column:nth-child(3) .category:nth-child(2) {
+            animation-delay: 0.25s;
+        }
+
+        .column:nth-child(5) .category:nth-child(1) {
+            animation-delay: 0.2s;
+        }
+
+        .column:nth-child(5) .category:nth-child(2) {
+            animation-delay: 0.3s;
+        }
+
+        .column:nth-child(5) .category:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+    </style>
+    <base target="_blank">
 </head>
+
 <body>
-  <a href="https://priyavkaneria.com/#dock"><h1>Index of /</h1></a>
-  <ul>
-    <li><a href="https://projects.priyavkaneria.com" target="_self" title="I like to build stuff">projects.priyavkaneria.com</a></li>
-    <li><a href="https://priyavkaneria.com/#blog" target="_self" title="Thoughts. thoughts?">blog.priyavkaneria.com</a></li>
-    <li><a href="https://dock.priyavkaneria.com" target="_self" title="Just the dock">dock.priyavkaneria.com</a></li>
-    <li><a href="https://fancy.priyavkaneria.com" target="_self" title="good ol' days">fancy.priyavkaneria.com</a></li>
-    <li><a href="https://spacetime.priyavkaneria.com" target="_self" title="sounds cool, is cool">spacetime.priyavkaneria.com</a></li>
-    <li><a href="https://hiddenmotion.priyavkaneria.com" target="_self" title="see things you never did">hiddenmotion.priyavkaneria.com</a></li>
-    <li><a href="https://chordwalk.priyavkaneria.com" target="_self" title="ever wondered how a stright line moves around a shape and how to simulate that? I did">chordwalk.priyavkaneria.com</a></li>
-    <li><a href="https://gol.priyavkaneria.com" target="_self" title="experimenting with the game of my life">gol.priyavkaneria.com</a></li>
-    <li><a href="https://index.priyavkaneria.com" target="_self" title="recursion">index.priyavkaneria.com</a></li>
-    <li><a href="https://interesume.priyavkaneria.com" target="_self" title="interactive resume">interesume.priyavkaneria.com</a></li>
-    <li><a href="https://output.priyavkaneria.com" target="_self" title="Output - Productivity tracker app">output.priyavkaneria.com</a></li>
-    <li><a href="https://locallock.priyavkaneria.com" target="_self" title="local lock - playstore">locallock.priyavkaneria.com</a></li>
-    <li><a href="https://pong.priyavkaneria.com" target="_self" title="single player space pong with black holes">pong.priyavkaneria.com</a></li>
-    <li><a href="https://maze.priyavkaneria.com" target="_self" title="a fun maze rpg">maze.priyavkaneria.com</a></li>
-    <li><a href="https://x.priyavkaneria.com" target="_self" title="I am active on twitter btw">x.priyavkaneria.com</a></li>
-    <li><a href="https://blank.priyavkaneria.com" target="_self" title="nothing here">blank.priyavkaneria.com</a></li>
-  </ul>
+
+    <header>
+        <a href="#" class="masthead">index.priyavkaneria.com</a>
+        <p class="dateline">A curated directory of all my digital experiments</p>
+    </header>
+
+    <div class="date-bar">
+        <span class="english-date" id="english-date"></span>
+        <span class="hindi-date" id="hindi-date"></span>
+    </div>
+
+    <main>
+        <!-- Column 1: Highlights, Games -->
+        <div class="column">
+            <section class="category">
+                <h2 class="category-title">highlights</h2>
+                <div class="links-container">
+                    <article class="link-card">
+                        <div class="link-header">
+                            <a href="https://priyavkaneria.com" class="link-title">priyavkaneria.com</a>
+                            <span class="link-date">2021</span>
+                        </div>
+                        <div class="image-preview"
+                            data-tooltip="The main portfolio site. A hub for everything I do — projects, writings, and more.">
+                            <div class="image-wrapper">
+                                <img src="images/priyavkaneriacom-news.png" alt="priyavkaneria.com">
+                            </div>
+                            <div class="fade-overlay"></div>
+                        </div>
+                    </article>
+
+                    <article class="link-card">
+                        <div class="link-header">
+                            <a href="https://projects.priyavkaneria.com"
+                                class="link-title">projects.priyavkaneria.com</a>
+                            <span class="link-date">2022</span>
+                        </div>
+                        <div class="image-preview"
+                            data-tooltip="A dedicated showcase of various builds and experiments. I like to build stuff.">
+                            <div class="image-wrapper">
+                                <img src="images/projectspriyavkaneriacom-news.png" alt="projects.priyavkaneria.com">
+                            </div>
+                            <div class="fade-overlay"></div>
+                        </div>
+                    </article>
+
+                    <article class="link-card">
+                        <div class="link-header">
+                            <a href="https://interesume.priyavkaneria.com"
+                                class="link-title">interesume.priyavkaneria.com</a>
+                            <span class="link-date">2024</span>
+                        </div>
+                        <div class="image-preview"
+                            data-tooltip="Interesume — An interactive resume experience that brings your CV to life.">
+                            <div class="image-wrapper">
+                                <img src="images/interesume-news.png" alt="interesume.priyavkaneria.com">
+                            </div>
+                            <div class="fade-overlay"></div>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+            <section class="category">
+                <h2 class="category-title">games</h2>
+                <div class="links-container">
+                    <article class="link-card">
+                        <div class="link-header">
+                            <a href="https://pong.priyavkaneria.com" class="link-title">pong.priyavkaneria.com</a>
+                            <span class="link-date">2024</span>
+                        </div>
+                        <div class="image-preview"
+                            data-tooltip="Space Pong — A single-player twist on Pong with black holes!">
+                            <div class="image-wrapper">
+                                <img src="images/pongpriyavkaneriacom-news.png" alt="pong.priyavkaneria.com">
+                            </div>
+                            <div class="fade-overlay"></div>
+                        </div>
+                    </article>
+
+                    <article class="link-card">
+                        <div class="link-header">
+                            <a href="https://maze.priyavkaneria.com" class="link-title">maze.priyavkaneria.com</a>
+                            <span class="link-date">2023</span>
+                        </div>
+                        <div class="image-preview"
+                            data-tooltip="Maze RPG — A fun maze game with RPG elements to explore.">
+                            <div class="image-wrapper">
+                                <img src="images/mazepriyavkaneriacom-news.png" alt="maze.priyavkaneria.com">
+                            </div>
+                            <div class="fade-overlay"></div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </div>
+
+        <div class="vertical-separator"></div>
+
+        <!-- Column 2: Products & Miscellaneous -->
+        <div class="column">
+            <section class="category">
+                <h2 class="category-title">products</h2>
+                <div class="links-container">
+                    <article class="link-card">
+                        <div class="link-header">
+                            <a href="https://output.priyavkaneria.com" class="link-title">output.priyavkaneria.com</a>
+                            <span class="link-date">2023</span>
+                        </div>
+                        <div class="image-preview"
+                            data-tooltip="Output — A productivity tracker app to monitor and improve your daily output.">
+                            <div class="image-wrapper">
+                                <img src="images/output-news.png" alt="output.priyavkaneria.com">
+                            </div>
+                            <div class="fade-overlay"></div>
+                        </div>
+                    </article>
+
+                    <article class="link-card">
+                        <div class="link-header">
+                            <a href="https://locallock.priyavkaneria.com"
+                                class="link-title">locallock.priyavkaneria.com</a>
+                            <span class="link-date">2022</span>
+                        </div>
+                        <div class="image-preview"
+                            data-tooltip="LocalLock — Available on the Play Store. A secure local password manager.">
+                            <div class="image-wrapper">
+                                <img src="images/locallock-news.png" alt="locallock.priyavkaneria.com">
+                            </div>
+                            <div class="fade-overlay"></div>
+                        </div>
+                    </article>
+
+                    <article class="link-card">
+                        <div class="link-header">
+                            <a href="https://bolobhai.in" class="link-title">bolobhai.in</a>
+                            <span class="link-date">coming soon</span>
+                        </div>
+                        <div class="image-preview"
+                            data-tooltip="BoloBhai.in - Privacy focused personal memory companion. &nbsp; &nbsp; &nbsp; Your data, just for you.">
+                            <div class="image-wrapper">
+                                <img src="images/bolobhaiin-news.png" alt="bolobhai.in">
+                            </div>
+                            <div class="fade-overlay"></div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="category">
+                <h2 class="category-title">miscellaneous</h2>
+                <ul class="simple-list">
+                    <li><a href="https://fancy.priyavkaneria.com" title="Good ol' days">fancy.priyavkaneria.com</a></li>
+                    <li><a href="https://index.priyavkaneria.com" title="Recursion!">index.priyavkaneria.com</a></li>
+                    <li><a href="https://blank.priyavkaneria.com" title="Nothing here">blank.priyavkaneria.com</a></li>
+                    <li><a href="https://dock.priyavkaneria.com" title="Just the Dock">dock.priyavkaneria.com</a></li>
+                </ul>
+            </section>
+        </div>
+
+        <div class="vertical-separator"></div>
+
+        <!-- Column 3: Social, Experiments -->
+        <div class="column">
+            <section class="category">
+                <h2 class="category-title">social</h2>
+                <ul class="simple-list">
+                    <li><a href="https://x.priyavkaneria.com" title="I'm active on Twitter">x.priyavkaneria.com</a></li>
+                    <li><a href="https://priyavkaneria.com/#blog"
+                            title="Thoughts and writings">blog.priyavkaneria.com</a></li>
+                </ul>
+            </section>
+
+            <section class="category">
+                <h2 class="category-title">experiments</h2>
+                <div class="links-container">
+                    <article class="link-card">
+                        <div class="link-header">
+                            <a href="https://gol.priyavkaneria.com" class="link-title">gol.priyavkaneria.com</a>
+                            <span class="link-date">2022</span>
+                        </div>
+                        <div class="image-preview"
+                            data-tooltip="Game of Life — Experimenting with Conway's cellular automaton.">
+                            <div class="image-wrapper">
+                                <img src="images/golpriyavkaneriacom-news.png" alt="gol.priyavkaneria.com">
+                            </div>
+                            <div class="fade-overlay"></div>
+                        </div>
+                    </article>
+
+                    <article class="link-card">
+                        <div class="link-header">
+                            <a href="https://spacetime.priyavkaneria.com"
+                                class="link-title">spacetime.priyavkaneria.com</a>
+                            <span class="link-date">2023</span>
+                        </div>
+                        <div class="image-preview"
+                            data-tooltip="Spacetime — Sounds cool, is cool. A visualization of spacetime concepts.">
+                            <div class="image-wrapper">
+                                <img src="images/spacetimepriyavkaneriacom-news.png" alt="spacetime.priyavkaneria.com">
+                            </div>
+                            <div class="fade-overlay"></div>
+                        </div>
+                    </article>
+
+                    <article class="link-card">
+                        <div class="link-header">
+                            <a href="https://hiddenmotion.priyavkaneria.com"
+                                class="link-title">hiddenmotion.priyavkaneria.com</a>
+                            <span class="link-date">2024</span>
+                        </div>
+                        <div class="image-preview"
+                            data-tooltip="Hidden Motion — See things you never did. A motion amplification experiment.">
+                            <div class="image-wrapper">
+                                <img src="images/hiddenmotionpriyavkaneriacom-news.png"
+                                    alt="hiddenmotion.priyavkaneria.com">
+                            </div>
+                            <div class="fade-overlay"></div>
+                        </div>
+                    </article>
+
+                    <article class="link-card">
+                        <div class="link-header">
+                            <a href="https://chordwalk.priyavkaneria.com"
+                                class="link-title">chordwalk.priyavkaneria.com</a>
+                            <span class="link-date">2024</span>
+                        </div>
+                        <div class="image-preview"
+                            data-tooltip="Chord Walk — Ever wondered how a straight line moves around a shape? I did.">
+                            <div class="image-wrapper">
+                                <img src="images/chordwalkpriyavkaneriacom-news.png" alt="chordwalk.priyavkaneria.com">
+                            </div>
+                            <div class="fade-overlay"></div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <span class="copyright">© 2026 Priyav K Kaneria</span>
+        <span>— crafted with care —</span>
+    </footer>
+
+    <!-- Tooltip Element -->
+    <div id="mouse-tooltip"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Generate date bar content
+            const now = new Date();
+
+            // English date: "FRIDAY, JANUARY 17, 2026"
+            const englishOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            const englishDate = now.toLocaleDateString('en-US', englishOptions).toUpperCase();
+            document.getElementById('english-date').textContent = englishDate;
+
+            // Hindi date: "शुक्रवार, १७ माघ २०८२"
+            const hindiOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            const hindiDate = now.toLocaleDateString('hi-IN-u-ca-indian', hindiOptions);
+            document.getElementById('hindi-date').textContent = hindiDate;
+
+            const tooltip = document.getElementById('mouse-tooltip');
+            const allPreviews = document.querySelectorAll('.image-preview');
+
+            let tooltipVisible = false;
+            let currentPreview = null;
+
+            allPreviews.forEach(preview => {
+                // Show tooltip when hovering over the image preview area
+                preview.addEventListener('mouseenter', (e) => {
+                    const text = preview.getAttribute('data-tooltip');
+                    if (text) {
+                        tooltip.textContent = text;
+                        tooltipVisible = true;
+                        currentPreview = preview;
+
+                        // Small delay for smoother appearance
+                        requestAnimationFrame(() => {
+                            tooltip.classList.add('visible');
+                        });
+                    }
+                });
+
+                // Update tooltip position on mouse move
+                preview.addEventListener('mousemove', (e) => {
+                    if (!tooltipVisible) return;
+
+                    const offsetX = -27;
+                    const offsetY = 20;
+
+                    let x = e.clientX + offsetX;
+                    let y = e.clientY + offsetY;
+
+                    // Keep tooltip within viewport
+                    const tooltipRect = tooltip.getBoundingClientRect();
+                    const viewportWidth = window.innerWidth;
+                    const viewportHeight = window.innerHeight;
+
+                    // Track overflow state for arrow positioning
+                    let overflowX = false;
+                    let overflowY = false;
+
+                    // Adjust if tooltip would overflow right
+                    if (x + tooltipRect.width > viewportWidth - 20) {
+                        x = e.clientX - tooltipRect.width - offsetX;
+                        overflowX = true;
+                    }
+
+                    // Adjust if tooltip would overflow bottom
+                    if (y + tooltipRect.height > viewportHeight - 20) {
+                        y = e.clientY - tooltipRect.height - offsetY;
+                        overflowY = true;
+                    }
+
+                    // Update arrow position class based on overflow
+                    tooltip.classList.remove('arrow-top-left', 'arrow-top-right', 'arrow-bottom-left', 'arrow-bottom-right');
+                    if (overflowX && overflowY) {
+                        tooltip.classList.add('arrow-bottom-right');
+                    } else if (overflowX) {
+                        tooltip.classList.add('arrow-top-right');
+                    } else if (overflowY) {
+                        tooltip.classList.add('arrow-bottom-left');
+                    } else {
+                        tooltip.classList.add('arrow-top-left');
+                    }
+
+                    tooltip.style.left = x + 'px';
+                    tooltip.style.top = y + 'px';
+                });
+
+                // Hide tooltip when leaving the preview area
+                preview.addEventListener('mouseleave', () => {
+                    tooltipVisible = false;
+                    currentPreview = null;
+                    tooltip.classList.remove('visible');
+                });
+            });
+
+            // Also handle link card hover for smoother transitions
+            const linkCards = document.querySelectorAll('.link-card');
+            linkCards.forEach(card => {
+                card.addEventListener('mouseenter', () => {
+                    // Add a subtle scale effect to siblings
+                    const siblings = Array.from(card.parentElement.children);
+                    siblings.forEach(sibling => {
+                        if (sibling !== card) {
+                            sibling.style.opacity = '0.7';
+                        }
+                    });
+                });
+
+                card.addEventListener('mouseleave', () => {
+                    const siblings = Array.from(card.parentElement.children);
+                    siblings.forEach(sibling => {
+                        sibling.style.opacity = '1';
+                    });
+                });
+            });
+
+            // Prevent scrolling to last 10px and hide tooltip on scroll
+            let maxScroll = 0;
+            const updateMaxScroll = () => {
+                maxScroll = document.documentElement.scrollHeight - window.innerHeight - 10;
+            };
+            updateMaxScroll();
+            window.addEventListener('resize', updateMaxScroll);
+
+            window.addEventListener('scroll', () => {
+                // Hide tooltip on any scroll
+                if (tooltipVisible) {
+                    tooltipVisible = false;
+                    currentPreview = null;
+                    tooltip.classList.remove('visible');
+                }
+
+                // Prevent scrolling to last 10px
+                if (window.scrollY > maxScroll) {
+                    window.scrollTo(0, maxScroll);
+                }
+            });
+        });
+    </script>
+
 </body>
+
 </html>
